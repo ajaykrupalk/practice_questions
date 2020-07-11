@@ -26,6 +26,6 @@ def extract():
     if res>length:#if count is greater than the length of previous words
       wrd=value#storing the word
       length=res#storing the length of the word
-  print(wrd)#the word is printed
+  print('The subsequence of ',s,'is:',wrd)#the subsequence is printed
 
 extract()
