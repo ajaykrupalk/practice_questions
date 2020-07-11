@@ -1,0 +1,6 @@
+'''Given a string, return the sum of the numbers appearing in the string, ignoring all other characters. '''
+import re
+def find_numb(string):
+  return sum(map(int,re.findall('\d+',string)))
+
+print('The sum is',find_numb("aa11b33"))
