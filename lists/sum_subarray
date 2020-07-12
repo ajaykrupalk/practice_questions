@@ -1,0 +1,18 @@
+'''Given an unsorted array A of size N of non-negative integers, find a continuous sub-array which adds to a given number S.'''
+def sum_subarray(a,n,s):
+  sum=a[0]#storing the first element
+  i=1#starting indice from 1
+  start=0
+  while i<=n:#iterating through elements of list
+    while sum>s and start<i-1:
+      sum=sum-a[start]
+      start+=1
+    if sum==s:
+      return f'Sum found from indices {start} to {i-1}'
+    if i<n:
+      sum=sum+a[i]
+    i+=1
+  return 'Subarray not found'
+
+a=[6,3,7,8,2]
+print(sum_subarray(a,len(a),15))
